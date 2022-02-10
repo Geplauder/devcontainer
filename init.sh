@@ -32,6 +32,8 @@ if [ ! -d "./oxygen/.git" ]; then
 	cd ./oxygen
 	npm i
 
+	cp /workspace/.env.oxygen .env.local
+
 	echo "Oxygen npm packages successfully installed."
 	cd ./..
 
@@ -41,15 +43,3 @@ else
 fi
 
 echo "Repositories successfully initialized"
-
-# cd ./ferrum
-# nohup bash -c "cargo watch -x 'run --bin ferrum' &"
-# cd ./ferrum-websocket
-# nohup bash -c "cargo watch -x 'run --bin ferrum-websocket' &"
-
-# cd ../../oxygen
-# nohup bash -c "yarn dev"
-
-# cd ./../
-
-# sleep infinity
