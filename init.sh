@@ -2,9 +2,10 @@
 
 echo "Initializing repositories..."
 
-if [ ! -d "./ferrum" ]; then
+if [ ! -d "./ferrum/.git" ]; then
 	echo "Ferrum not found, cloning..."
 
+	rm -r ferrum
 	git clone https://github.com/Geplauder/ferrum.git ferrum
 
 	echo "Ferrum cloned successfully, initializing database..."
@@ -21,8 +22,9 @@ else
 	echo "Found existing Ferrum directory, skipping..."
 fi
 
-if [ ! -d "./oxygen" ]; then
+if [ ! -d "./oxygen/.git" ]; then
 	echo "Oxygen not found, cloning..."
+	rm -r oxygen
 	git clone https://github.com/Geplauder/oxygen.git oxygen
 	echo "Oxygen cloned successfully"
 else

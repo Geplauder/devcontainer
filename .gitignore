@@ -1,2 +1,5 @@
-ferrum/
-oxygen/
+ferrum/*
+oxygen/*
+
+!ferrum/.gitkeep
+!oxygen/.gitkeep
