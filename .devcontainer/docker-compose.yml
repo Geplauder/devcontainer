@@ -27,11 +27,8 @@ services:
     volumes:
       - ..:/workspace:cached
 
-    # Initializes and migrates database, and overrides default command so things don't shut down after the process ends.
-    command: bash -c "cd /workspace && bash ./init.sh"
-#    command: > 
-#      bash -c "cd /workspace/ferrum-db && cargo sqlx database create && cargo sqlx migrate run
-#      && sleep infinity"
+    # Override default command so things don't shut down after the process ends.
+    command: "bash -c 'sleep infinity'"
 
     # user: vscode
 
