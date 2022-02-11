@@ -42,4 +42,8 @@ else
 	echo "Found existing Oxygen directory, skipping..."
 fi
 
+echo "Fixing cargo permissions..."
+sudo chmod -R g+rw /usr/local/cargo
+echo "Cargo permissions fixed."
+
 echo "Repositories successfully initialized"
